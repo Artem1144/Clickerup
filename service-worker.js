@@ -1,4 +1,4 @@
-var CACHE_NAME = "clicker-up-v3";
+var CACHE_NAME = "clicker-up-v12";
 var URLS = [
   "./",
   "./index.html",
@@ -14,7 +14,7 @@ var URLS = [
 ];
 
 self.addEventListener("install", function(e) {
-  self.skipWaiting(); // сразу активировать новый SW
+  self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE_NAME).then(function(cache) {
       return cache.addAll(URLS);
@@ -31,7 +31,7 @@ self.addEventListener("activate", function(e) {
         })
       );
     }).then(function() {
-      return self.clients.claim(); // взять контроль сразу
+      return self.clients.claim();
     })
   );
 });
