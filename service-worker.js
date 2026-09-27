@@ -1,4 +1,4 @@
-var CACHE_NAME = "clicker-up-v12";
+var CACHE_NAME = "clicker-up-v13";
 var URLS = [
   "./",
   "./index.html",
